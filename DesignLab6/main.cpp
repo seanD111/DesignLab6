@@ -42,8 +42,12 @@ int main() {
 	Paper p1(3);
 	Rock r1(3);
 	s1.fight(p1);
+	cout<<endl;
 	p1.fight(r1);
+	cout<<endl;
 	r1.fight(s1);
+	cout<<endl;
+	s1.fight(s1);
 
 	return 0;
 }
