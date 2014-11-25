@@ -23,6 +23,20 @@ char Tool::getType(){
 	return type;
 }
 
+void Tool::printType(){
+	switch(type){
+	case 'r':
+		cout<<"rock";
+		break;
+	case 'p':
+		cout<<"paper";
+		break;
+	case 's':
+		cout<<"scissors";
+		break;
+	}
+}
+
 
 /******************************Rock Implements*************************/
 //Constructors//
@@ -50,6 +64,16 @@ bool Rock::fight(Tool enemy_tool){
 	case 's':
 		if((strength*2)>enemy_tool.getStrength()) won=true;
 		break;
+	}
+	if(won){
+		printType();
+		cout<<" beats ";
+		enemy_tool.printType();
+	}
+	else {
+		enemy_tool.printType();
+		cout<<" beats ";
+		printType();
 	}
 	return won;
 
@@ -82,6 +106,16 @@ bool Rock::fight(Tool enemy_tool){
 		if((strength/2)>enemy_tool.getStrength()) won=true;
 		break;
 	}
+	if(won){
+		printType();
+		cout<<" beats ";
+		enemy_tool.printType();
+	}
+	else {
+		enemy_tool.printType();
+		cout<<" beats ";
+		printType();
+	}
 	return won;
 }
 
@@ -111,6 +145,16 @@ bool Scissors::fight(Tool enemy_tool){
 	case 's':
 		if((strength)>enemy_tool.getStrength()) won=true;
 		break;
+	}
+	if(won){
+		printType();
+		cout<<" beats ";
+		enemy_tool.printType();
+	}
+	else {
+		enemy_tool.printType();
+		cout<<" beats ";
+		printType();
 	}
 	return won;
 }

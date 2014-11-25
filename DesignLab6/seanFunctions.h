@@ -9,6 +9,8 @@
 #define SEANFUNCTIONS_H_
 #include <iostream>
 #include <string>
+#include <typeinfo>
+
 
 
 //set the default strength to 20
@@ -31,6 +33,8 @@ public:
 	//function to set the strength of the tool
 	void setStrength(int);
 
+	//function to set the strength of the tool
+	void printType();
 };
 
 /******************************Rock class; derives from Tool*************************/
@@ -78,11 +82,15 @@ public:
 		return(sum);
 	}
 	T productOfArray(T* array, int size){
+
 		T product= 1;
 		for(int i=0; i<size; i++){
 			product*=array[i];
 		}
+
 		return(product);
+
+
 	}
 
 };
