@@ -8,6 +8,7 @@
 #ifndef SEANFUNCTIONS_H_
 #define SEANFUNCTIONS_H_
 #include <iostream>
+#include <string>
 
 
 //set the default strength to 20
@@ -54,5 +55,17 @@ public:
 	Scissors(int);
 	bool fight(Tool);
 };
+
+
+template<class T> class ArrayUtils {
+public:
+	void print(T*, int);
+	void printReverse(T*, int);
+	T sumAll(T*, int);
+	T productOfArray(T*, int);
+
+};
+
+
 
 #endif /* SEANFUNCTIONS_H_ */

@@ -6,7 +6,7 @@
  */
 #include "seanFunctions.h"
 
-
+using namespace std;
 /******************************Tool Implements*************************/
 //setstrength function; sets strength to integer input//
 void Tool::setStrength(int a){
@@ -113,4 +113,30 @@ bool Scissors::fight(Tool enemy_tool){
 		break;
 	}
 	return won;
+}
+
+
+template<class T> void ArrayUtils<T>::print(T* array, int size){
+	for(int i=0; i<size; i++){
+		cout<< array[i];
+	}
+}
+template<class T> void ArrayUtils<T>::printReverse(T* array, int size){
+	for(int i=size-1; i>-1; i--){
+		cout<< array[i];
+	}
+}
+template<class T> T ArrayUtils<T>::sumAll(T* array, int size){
+	T sum= NULL;
+	for(int i=0; i<size; i++){
+		sum+=array[i];
+	}
+	return(sum);
+}
+template<class T> T ArrayUtils<T>::productOfArray(T* array, int size){
+	T product= NULL;
+	for(int i=0; i<size; i++){
+		product*=array[i];
+	}
+	return(product);
 }
