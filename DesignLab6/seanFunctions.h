@@ -13,6 +13,7 @@
 
 //set the default strength to 20
 #define DEFAULT_STR 20
+using namespace std;
 
 
 /**********************************Tool class*****************************/
@@ -59,10 +60,30 @@ public:
 
 template<class T> class ArrayUtils {
 public:
-	void print(T*, int);
-	void printReverse(T*, int);
-	T sumAll(T*, int);
-	T productOfArray(T*, int);
+	void print(T* array, int size){
+		for(int i=0; i<size; i++){
+			cout<< array[i]<<" ";
+		}
+	}
+	void printReverse(T* array, int size){
+		for(int i=size-1; i>-1; i--){
+			cout<< array[i]<<" ";
+		}
+	}
+	T sumAll(T* array, int size){
+		T sum= NULL;
+		for(int i=0; i<size; i++){
+			sum+=array[i];
+		}
+		return(sum);
+	}
+	T productOfArray(T* array, int size){
+		T product= 1;
+		for(int i=0; i<size; i++){
+			product*=array[i];
+		}
+		return(product);
+	}
 
 };
 

@@ -17,9 +17,22 @@ int main() {
 
 	ArrayUtils<int> iTools;
 	iTools.print(int_arr, 11);
+	iTools.printReverse(int_arr, 11);
+
+
+	cout<<iTools.sumAll(int_arr, 11)<<" " <<iTools.productOfArray(int_arr, 11)<<"\n\n";
 
 	ArrayUtils<float> fTools;
 	fTools.print(float_arr, 5);
+	fTools.printReverse(float_arr, 5);
+
+	cout<<fTools.sumAll(float_arr, 5)<<" " <<fTools.productOfArray(float_arr, 5)<<"\n\n";
+
+	ArrayUtils<char> cTools;
+	cTools.print(char_arr, 8);
+	cTools.printReverse(char_arr, 8);
+
+	cout<<cTools.sumAll(char_arr, 8)<<" " <<cTools.productOfArray(char_arr, 8)<<"\n\n";
 
 //	Scissors s1(3);
 //	Paper p1(3);
