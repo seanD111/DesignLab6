@@ -159,7 +159,15 @@ bool Scissors::fight(Tool enemy_tool){
 	return won;
 }
 
-
+//calculateAverage function; needs to://
+//a) make sure no numbers are out of 0-100
+//b) calculate average
+float calculateAverage(int a, int b, int c, int d){
+	if(a<0||a>100 ||b<0||b>100|| c<0||c>100|| d<0||d>100) throw OutOfRange();
+	float avg=(a+b+c+d)/4;
+	cout<<"\n\nAverage of "<<a<<", " <<b<<", "<< c<<", and "<<d<<" is: "<<avg<<"\n\n";
+	return (avg);
+}
 
 
 

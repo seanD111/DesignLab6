@@ -9,7 +9,8 @@
 #define SEANFUNCTIONS_H_
 #include <iostream>
 #include <string>
-#include <typeinfo>
+
+#include <exception>      // std::exception
 
 
 
@@ -61,7 +62,7 @@ public:
 	bool fight(Tool);
 };
 
-
+/***************************ArrayUtils Template***************************************/
 template<class T> class ArrayUtils {
 public:
 	void print(T* array, int size){
@@ -83,9 +84,13 @@ public:
 	}
 	T productOfArray(T* array, int size){
 
-		T product= 1;
+		T product;
+		product=1;
+
 		for(int i=0; i<size; i++){
 			product*=array[i];
+
+
 		}
 
 		return(product);
@@ -95,6 +100,11 @@ public:
 
 };
 
+
+//calculateAverage() function, with possible error exceptions
+//exception thrown if attempting to enter a number not between 0-100;
+class OutOfRange{};
+float calculateAverage(int, int, int, int);
 
 
 #endif /* SEANFUNCTIONS_H_ */
